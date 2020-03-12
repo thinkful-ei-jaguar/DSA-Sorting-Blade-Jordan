@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger */
 //Bubble Sort
 function swap(array, i , j) {
   const temp = array[i];
@@ -59,6 +60,7 @@ function merge(left, right, array) {
 //Quicksort
 
 function quickSort(array, start = 0, end = array.length) {
+  debugger;
   if (start >= end) {
     return array;
   }
@@ -69,7 +71,8 @@ function quickSort(array, start = 0, end = array.length) {
 }
 
 function partition(array, start, end) {
-  const pivot = array[end - 1];
+  debugger;
+  const pivot = array[start];
   let j = start;
   for (let i = start; i < end - 1; i++) {
     if (array[i] <= pivot) {
@@ -81,4 +84,9 @@ function partition(array, start, end) {
   return j;
 }
 
-mergeSort([9, 5, 7, 45, 1, 10, 2, 78]);
+quickSort([14, 17, 13, 15, 19, 10, 3, 16, 9, 12]);
+
+
+          [3, 9, 10, 12, 19, 14, 17, 16, 13, 15] // 2a
+
+          [14, 13, 10, 3, 9, 12, 15, 16, 19, 17] // 2b
