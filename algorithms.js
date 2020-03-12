@@ -24,7 +24,6 @@ function mergeSort(array) {
   if (array.length <= 1) {
     return array;
   }
-
   const middle = Math.floor(array.length / 2);
   let left = array.slice(0, middle);
   let right = array.slice(middle, array.length);
@@ -81,3 +80,5 @@ function partition(array, start, end) {
   swap(array, end-1, j);
   return j;
 }
+
+mergeSort([9, 5, 7, 45, 1, 10, 2, 78]);
